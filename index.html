@@ -6,11 +6,17 @@
   <title>RPS Arena</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <div class="container">
-    <h1>⚔️ RPS Arena</h1>
+    <h1><i class="fa-solid fa-shield-halved"></i> RPS Arena</h1>
     <p class="subtitle">Best of 5 — First to 3 wins!</p>
+
+    <div class="mode-selector">
+      <button class="mode-btn active" data-mode="easy"><i class="fa-solid fa-face-smile"></i> Easy</button>
+      <button class="mode-btn" data-mode="hard"><i class="fa-solid fa-skull"></i> Hard</button>
+    </div>
 
     <div class="scoreboard">
       <div class="score-box">
@@ -28,27 +34,27 @@
     </div>
 
     <div class="choices">
-      <button class="choice-btn" data-choice="rock">🪨<span>Rock</span></button>
-      <button class="choice-btn" data-choice="paper">📄<span>Paper</span></button>
-      <button class="choice-btn" data-choice="scissors">✂️<span>Scissors</span></button>
+      <button class="choice-btn" data-choice="rock"><i class="fa-solid fa-hand-back-fist"></i><span>Rock</span></button>
+      <button class="choice-btn" data-choice="paper"><i class="fa-solid fa-hand"></i><span>Paper</span></button>
+      <button class="choice-btn" data-choice="scissors"><i class="fa-solid fa-hand-scissors"></i><span>Scissors</span></button>
     </div>
 
     <div class="result-area">
       <div class="picks">
         <div class="pick">
-          <div class="pick-icon" id="playerPick">❓</div>
+          <div class="pick-icon" id="playerPick"><i class="fa-solid fa-question"></i></div>
           <div class="pick-label">You</div>
         </div>
         <div class="vs">VS</div>
         <div class="pick">
-          <div class="pick-icon" id="computerPick">❓</div>
+          <div class="pick-icon" id="computerPick"><i class="fa-solid fa-question"></i></div>
           <div class="pick-label">CPU</div>
         </div>
       </div>
       <div class="result-text" id="resultText">Make your move!</div>
     </div>
 
-    <button class="reset-btn" id="resetBtn">🔄 Reset Game</button>
+    <button class="reset-btn" id="resetBtn"><i class="fa-solid fa-rotate-right"></i> Reset Game</button>
   </div>
 
   <footer>Developed by <strong>anointedthedeveloper</strong></footer>
