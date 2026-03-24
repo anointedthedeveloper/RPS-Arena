@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 480px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  background: linear-gradient(90deg, #f7971e, #ffd200);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: #aaa;
+  letter-spacing: 1px;
+}
+
+/* Scoreboard */
+.scoreboard {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  justify-content: center;
+}
+
+.score-box {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  padding: 12px 24px;
+  text-align: center;
+  flex: 1;
+}
+
+.score-box.draws {
+  background: rgba(255,255,255,0.04);
+}
+
+.score-label {
+  display: block;
+  font-size: 0.75rem;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.score-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffd200;
+}
+
+/* Choice Buttons */
+.choices {
+  display: flex;
+  gap: 14px;
+}
+
+.choice-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.08);
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 16px;
+  padding: 16px 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.choice-btn span {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.choice-btn:hover:not(:disabled) {
+  transform: translateY(-4px) scale(1.05);
+  border-color: #ffd200;
+  background: rgba(255, 210, 0, 0.15);
+}
+
+.choice-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Result Area */
+.result-area {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 20px 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.picks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 12px;
+}
+
+.pick-icon {
+  font-size: 2.5rem;
+  transition: transform 0.3s;
+}
+
+.pick-icon.pop {
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+  0%   { transform: scale(0.5); }
+  70%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.pick-label {
+  font-size: 0.75rem;
+  color: #aaa;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.vs {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #555;
+}
+
+.result-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.result-text.win  { color: #4cff91; }
+.result-text.lose { color: #ff4c6a; }
+.result-text.draw { color: #aaa; }
+
+/* Reset Button */
+.reset-btn {
+  background: linear-gradient(90deg, #f7971e, #ffd200);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 28px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: transform 0.15s, opacity 0.15s;
+}
+
+.reset-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  font-size: 0.75rem;
+  color: #555;
+  letter-spacing: 1px;
+}
+
+footer strong {
+  color: #ffd200;
+}
