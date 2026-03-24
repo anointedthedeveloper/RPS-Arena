@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RPS Arena</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>⚔️ RPS Arena</h1>
+    <p class="subtitle">Best of 5 — First to 3 wins!</p>
+
+    <div class="scoreboard">
+      <div class="score-box">
+        <span class="score-label">You</span>
+        <span class="score-value" id="playerScore">0</span>
+      </div>
+      <div class="score-box draws">
+        <span class="score-label">Draws</span>
+        <span class="score-value" id="draws">0</span>
+      </div>
+      <div class="score-box">
+        <span class="score-label">CPU</span>
+        <span class="score-value" id="computerScore">0</span>
+      </div>
+    </div>
+
+    <div class="choices">
+      <button class="choice-btn" data-choice="rock">🪨<span>Rock</span></button>
+      <button class="choice-btn" data-choice="paper">📄<span>Paper</span></button>
+      <button class="choice-btn" data-choice="scissors">✂️<span>Scissors</span></button>
+    </div>
+
+    <div class="result-area">
+      <div class="picks">
+        <div class="pick">
+          <div class="pick-icon" id="playerPick">❓</div>
+          <div class="pick-label">You</div>
+        </div>
+        <div class="vs">VS</div>
+        <div class="pick">
+          <div class="pick-icon" id="computerPick">❓</div>
+          <div class="pick-label">CPU</div>
+        </div>
+      </div>
+      <div class="result-text" id="resultText">Make your move!</div>
+    </div>
+
+    <button class="reset-btn" id="resetBtn">🔄 Reset Game</button>
+  </div>
+
+  <footer>Developed by <strong>anointedthedeveloper</strong></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
